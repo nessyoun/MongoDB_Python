@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+  <!-- choose one -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="navbar-brand">Admin</div>
+    <a href="./index.html"><ion-icon name="home-outline"></ion-icon>  Home</span></a>
+    <a href="./insert.html"><ion-icon name="add-outline"></ion-icon>  Insert</a>
+    <a href="#"><ion-icon name="search-outline"></ion-icon>  Find</a>
+  </div>
+  <div id="content">
+    <!-- Search bar with filters -->
+<div class="row">
+<div class="input-group mb-3">
+    <input type="text" id="valu" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+        <p>
+           
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Filter
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" id="Title">Title</a></li>
+                  <li><a class="dropdown-item" href="#" id="Author">Author</a></li>
+                  <li><a class="dropdown-item" href="#" id="Short">Short Description</a></li>
+                  <li><a class="dropdown-item" href="#" id="Long">Long Description</a></li>
+                </ul>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+
+
+  <div class="col-md-6">
+    <div id="tableau"  onclick="dispo()">
+     
+    </div>  
+  </div>
+  <div class="col-md-4" id="details"  style="margin-left:12%;display:none;">
+    <button class="btn btn-primary" onclick="editItem()">Modifier</button>
+    <button class="btn btn-danger" onclick="deleteItem()">Supprimer</button>
+    <form id="insertion">
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text" class="form-control" id="title" name="title" >
+        <input type="hidden" value="" id="_id">
+      </div>
+      <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" class="form-control" id="isbn" name="isbn" >
+      </div>
+      <div class="form-group">
+        <label for="pageCount">Nombre de pages</label>
+        <input type="number" class="form-control" id="pageCount" name="pageCount" >
+      </div>
+      <div class="form-group">
+        <label for="publishedDate">Date de publication</label>
+        <input type="text" class="form-control" id="publishedDate" name="publishedDate" />
+      </div>
+      <div class="form-group">
+        <label for="thumbnailUrl">URL de l'image miniature</label>
+        <input type="url" class="form-control" id="thumbnailUrl" name="thumbnailUrl" >
+      </div>
+      <div class="form-group">
+        <label for="shortDescription">Description courte</label>
+        <textarea class="form-control" id="shortDescription" name="shortDescription" rows="3" ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="longDescription">Description longue</label>
+        <textarea class="form-control" id="longDescription" name="longDescription" rows="5" ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="status">Statut</label>
+        <select class="form-control" id="status" name="status" >
+          <option value="PUBLISH">Publier</option>
+          <option value="DRAFT">Brouillon</option>
+          <option value="ARCHIVE">Archiver</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="authors">Auteurs</label>
+        <input type="text" class="form-control" id="authors" name="authors" >
+      </div>
+      <div class="form-group">
+        <label for="categories">Catégories</label>
+        <input type="text" class="form-control" id="categories" name="categories" >
+      </div>
+    </form>
+  </div>
+
+</div>
+  
+  </div>
+
+
+  
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+      <script src="./scripts.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>

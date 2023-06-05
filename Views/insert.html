@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Insert</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+  <!-- choose one -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="navbar-brand">Admin</div>
+    <a href="./index.html"><ion-icon name="home-outline"></ion-icon>  Home</span></a>
+    <a href="./insert.html"><ion-icon name="add-outline"></ion-icon>  Insert</a>
+    <a href="./update.html"><ion-icon name="search-outline"></ion-icon>  Find</a>
+  </div>
+
+  <div id="content">
+    <div class="row">
+        <div class="col-md-6">
+            <br>
+            <button id="col" class="btn btn-primary text-center my-2 w-50" type="button" data-toggle="collapse" data-target="#formCollapse" aria-expanded="false" aria-controls="formCollapse">
+                <ion-icon name="add-outline"></ion-icon> Ajouter livre
+              </button>
+              
+              <div class="collapse" id="formCollapse">
+            <form id="insertion">
+                <div class="form-group">
+                  <label for="title">Titre</label>
+                  <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                  <label for="isbn">ISBN</label>
+                  <input type="text" class="form-control" id="isbn" name="isbn" required>
+                </div>
+                <div class="form-group">
+                  <label for="pageCount">Nombre de pages</label>
+                  <input type="number" class="form-control" id="pageCount" name="pageCount" required>
+                </div>
+                <div class="form-group">
+                  <label for="publishedDate">Date de publication</label>
+                  <input type="datetime-local" class="form-control" id="publishedDate" name="publishedDate" required>
+                </div>
+                <div class="form-group">
+                  <label for="thumbnailUrl">URL de l'image miniature</label>
+                  <input type="url" class="form-control" id="thumbnailUrl" name="thumbnailUrl" required>
+                </div>
+                <div class="form-group">
+                  <label for="shortDescription">Description courte</label>
+                  <textarea class="form-control" id="shortDescription" name="shortDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="longDescription">Description longue</label>
+                  <textarea class="form-control" id="longDescription" name="longDescription" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="status">Statut</label>
+                  <select class="form-control" id="status" name="status" required>
+                    <option value="PUBLISH">Publier</option>
+                    <option value="DRAFT">Brouillon</option>
+                    <option value="ARCHIVE">Archiver</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="authors">Auteurs</label>
+                  <input type="text" class="form-control" id="authors" name="authors" required>
+                </div>
+                <div class="form-group">
+                  <label for="categories">Catégories</label>
+                  <input type="text" class="form-control" id="categories" name="categories" required>
+                </div>
+              </form>
+              <button class="btn btn-primary" onclick="ajouter()">Ajouter</button>
+              </div>
+              
+        </div>
+        <div class="col-md-6 d-inline">
+            <form>
+                <label for="fichier">Ajouter liste livres:</label>
+                <div class="d-flex"><input type="file" name="fichier" id="collection"  class="form-control" accept=".json" onchange="display()"/><button id="btn" class="btn btn-outline-primary" onclick="sendJSON()" style="display:none" type="button">send</button></div>
+                
+            </form>
+        </div>
+    </div>
+    
+      
+      <div class="row justify-content-center">
+
+        <div class="alert alert-info w-50 my-5 text-center" role="alert" id="res" style="display: none;"></div>
+      </div>
+
+  </div>
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+      <script src="./scripts.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</body>

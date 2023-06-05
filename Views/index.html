@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+  <!-- choose one -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="upload()">
+  <div id="sidebar">
+    <div class="navbar-brand">Admin</div>
+    <a href="./index.html"><ion-icon name="home-outline"></ion-icon>  Home</span></a>
+    <a href="./insert.html"><ion-icon name="add-outline"></ion-icon>  Insert</a>
+    <a href="./update.html"><ion-icon name="search-outline"></ion-icon>  Find</a>
+  </div>
+
+  <div id="content">
+    <div class="row container d-flex text-light align-content-center">
+      <div class="container col-md-3 box bg-danger" ><h5>Nombre<br> de livres:</h5><div id="box1">27</div></div>
+      <div class="container col-md-3 box bg-info"><h5>Nombre<br> d'Utilisateur:</h5><div id="box2">27</div></div>
+      <div class="container col-md-3 box bg-primary"><h5>Nombre<br> des telechargements:</h5><div id="box3">27</div></div>
+    </div>
+    <br>
+    <div class="container row justify-content-center w-100" id="lop">
+    </div>
+    <div class="row w-100" id="chartc">
+      <div class="col-md-5">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="col-md-7">
+        <br><br><br><br><br>
+        <canvas id="myChart1"></canvas>
+      </div>
+    </div>
+      <p><br>
+    <div class="row container">
+      <h3>Top ranked:</h3>
+      <div id="tableau"></div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script src="./scripts.js"></script>
+  
+</body>
+</html>
